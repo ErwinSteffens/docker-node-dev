@@ -9,6 +9,8 @@ before_script:
 
 build:
   stage: build
+  tags: 
+    - build-docker
   script:
-  - docker build -t $IMAGE_TAG .
-  - docker push $IMAGE_TAG
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
